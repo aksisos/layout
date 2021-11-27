@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+html, body {
+  font-family: 'TT Lakes';
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+button {
+  padding: 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sidebar__button {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.sidebar__button:hover {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+
+.sidebar__close {
+  background: url('img/burger.png');
+}
+
+.sidebar__logo {
+  display: block;
+  width: 97px;
+  height: 51px;
+  background: url('img/Group.png');
+}
+
+.sidebar__search {
+  margin-left: auto;
+  margin-right: 24px;
+  background: url('img/search.png');
+}
+
+.sidebar__header {
+ display: flex;
+ align-items: center;
+ padding-top: 18px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 320px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.sidebar__content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 16px;
+  width: 320px;
+  height: 100%;
+  min-height: 760px;
+  max-height: 1024px;
+  padding-left: 24px;
+}
+
+.sidebar__menu {
+  list-style: none;
+  margin-top: 50px;
+  padding: inherit;
+}
+
+.menu__element {
+  margin-bottom: 32px;
+}
+
+.menu__element--selected a {
+  color: #7E7E82;
+}
+.menu__element--selected::before {
+  content: url('img/highlight.svg');
+  margin-left: -24px;
+  margin-top: -5px;
+  max-height: 22px;
+  float: left;
+}
+
+.menu__element a::after {
+  opacity: 0%;
+  position: absolute;
+  content: "";
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #41F6D7;
+}
+
+.menu__element a:hover::after {
+  opacity: 100%;
+  transition: opacity 1s;
+}
+
+.menu__link {
+  text-decoration: none;
+  position: relative;
+  color: #1B1C21;
+}
+
+.footer__buttons {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.buttons__call {
+  margin-left: 0;
+  background-image: url('img/call.png');
+}
+
+.buttons__message {
+  background-image: url('img/chat.png');
+}
+
+.buttons__profile {
+  background-image: url('img/profile.png');
+}
+
+.footer__mail {
+  margin-bottom: 12px;
+}
+
+.footer__phone {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bolder;
+}
+
+.lang {
+  text-decoration: none;
+  color: #1B1C21;
+}
+
+.lang--selected {
+  color: #7E7E82;
+}
+
+.footer__content {
+  margin-bottom: 32px;
+}
