@@ -7,7 +7,7 @@ function mobileSlider() {
   if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
     swiper = new Swiper(".swiper-container", {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 16,
       width: 240,
       pagination: {
         el: ".swiper-pagination",
