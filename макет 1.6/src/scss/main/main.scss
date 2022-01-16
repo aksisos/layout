@@ -1,0 +1,271 @@
+.section {
+	z-index: 0;
+}
+.main__title {
+	font-size: 28px;
+	line-height: 40px;
+	position: relative;
+	margin-left: 16px;
+	font-weight: bold;
+	&::before {
+		content: url("../img/highlight.svg");
+		left: -16px;
+		max-height: 22px;
+		position: absolute;
+	}
+}
+.main__nav {
+	display: flex;
+	overflow: scroll;
+	padding-left: 16px;
+	margin-bottom: 24px;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+.main__button-label {
+	display: none;
+}
+.main__nav-link {
+	margin: 0 5px;
+	line-height: 24px;
+	display: flex;
+	color: $greyText;
+	border: 2px solid $bgColor;
+	padding: 8px 10px 8px 16px;
+	border-radius: 6px;
+	background-color: $bgColor;
+	font-size: 16px;
+	text-decoration: none;
+	justify-content: center;
+	white-space: nowrap;
+	&:hover {
+		border: 2px solid $borderColor;
+		background-color: $white;
+	}
+}
+.main__section {
+	display: flex;
+	flex-direction: column;
+}
+.main__text {
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0.2px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+.main__paragraph1 {
+	margin-top: 0;
+}
+
+.main__text--hide {
+	display: none;
+}
+
+.main__show-button {
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 600;
+	display: flex;
+	margin-top: 16px;
+}
+.main__img {
+	height: 176px;
+	width: 320px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 24px;
+}
+
+.main__show-icon {
+	margin-right: 5px;
+	margin-top: 20px;
+}
+
+.main__get-offer {
+	min-width: 300px;
+	max-width: 440px;
+	margin: 24px 0 47px 24px;
+}
+.main__offer-desc {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	margin-bottom: 16px;
+}
+.main__offer-link {
+	color: $text;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	position: relative;
+
+	&::after {
+		content: url("../img/Line.svg");
+		padding-left: 10px;
+		position: absolute;
+	}
+
+	&:hover {
+		color: #7e7e82;
+	}
+}
+
+@media (max-width: 360px) {
+	.swiper-container::after {
+	  content: "";
+	  position: absolute;
+	  right: 0;
+	  top: 712px;
+	  width: 24px;
+	  height: 72px;
+	  z-index: 1;
+	  background: linear-gradient(
+		270deg,
+		#f8f8f8 16.84%,
+		rgba(248, 248, 248, 0.0001) 100%
+	  );
+	}
+
+	.tech__container::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 921px;
+		width: 24px;
+		height: 160px;
+		z-index: 1;
+		background: linear-gradient(
+		  270deg,
+		  #f8f8f8 16.84%,
+		  rgba(248, 248, 248, 0.0001) 100%
+		);
+	}
+
+	  .prices__container::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 1217px;
+		width: 24px;
+		height: 200px;
+		z-index: 1;
+		background: linear-gradient(
+		  270deg,
+		  #f8f8f8 16.84%,
+		  rgba(248, 248, 248, 0.0001) 100%
+		);
+	}
+}
+
+@media (max-width: 339px) {
+	.swiper-container::after {
+	  content: "";
+	  position: absolute;
+	  right: 0;
+	  top: 732px;
+	  width: 24px;
+	  height: 72px;
+	  z-index: 1;
+	  background: linear-gradient(
+		270deg,
+		#f8f8f8 16.84%,
+		rgba(248, 248, 248, 0.0001) 100%
+	  );
+	}
+
+	.tech__container::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 963px;
+		width: 24px;
+		height: 160px;
+		z-index: 1;
+		background: linear-gradient(
+		  270deg,
+		  #f8f8f8 16.84%,
+		  rgba(248, 248, 248, 0.0001) 100%
+		);
+	}
+
+	  .prices__container::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 1259px;
+		width: 24px;
+		height: 200px;
+		z-index: 1;
+		background: linear-gradient(
+		  270deg,
+		  #f8f8f8 16.84%,
+		  rgba(248, 248, 248, 0.0001) 100%
+		);
+	}
+}
+
+@media ($minTablet) {
+	.main__section {
+		flex-direction: row;
+	}
+	.main__nav {
+		margin-bottom: 32px;
+	}
+	.main__img {
+		margin-right: 24px;
+		margin-left: 48px;
+		width: 360px;
+		height: 208px;
+		border-radius: 6px;
+	}
+	
+}
+@media ($minDesktop) {
+	.main {
+		margin-left: 320px;
+	}
+	.main__header {
+		display: flex;
+		justify-content: space-between;
+	}
+	.main__title {
+		line-height: normal;
+		margin-bottom: 8px;
+		margin-top: 42px;
+	}
+	.main__button-label {
+		display: flex;
+		align-items: center;
+		margin-top: 38px;
+	}
+	.main__buttons {
+		display: flex;
+	}
+	.main__repair-button {
+		background: url("../img/repair.svg");
+		margin-left: 8px;
+	}
+	.main__status-button {
+		background: url("../img/checkstatus.svg");
+		margin-left: 8px;
+		margin-right: 30px;
+	}
+	.main__nav {
+		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 4px;
+	}
+	.main__img {
+		margin-right: 24px;
+		margin-left: 48px;
+		width: 531px;
+		height: 307px;
+		border-radius: 6px;
+	}
+}

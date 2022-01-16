@@ -1,0 +1,106 @@
+$bgColor: #f8f8f8;
+$text: #1b1c21;
+$white: #ffffff;
+$borderColor: #B8FFEC;
+$greyText: #7e7e82;
+$pink: #ff3e79;
+
+$minTablet: "min-width: 768px";
+$minDesktop: "min-width: 1366px";
+
+@import "header/header.scss";
+@import "main/main.scss";
+@import "sidebar/sidebar.scss";
+@import "slider/slider.scss";
+@import "footer/footer.scss";
+@import "modal/modal.scss";
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../font/TTLakes-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../font/TTLakes-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url(../font/TTLakes-Medium.woff) format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url(../font/TTLakes-DemiBold.woff) format("woff");
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "TTLakes";
+  color: $text;
+  background-color: $bgColor;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+button {
+  padding: 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: TTLakes, sans-serif;
+
+  &:hover {
+    filter: brightness(150%);
+  }
+  &:active {
+    border: none;
+    outline: none;
+  }
+}
+
+.white-mask {
+  position: fixed;
+  display: none;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: white;
+  @media ($minDesktop) {
+    z-index: 4;
+  }
+}
+
+.white-mask--show {
+  display: block;
+}
+
+.show-all__text {
+  font-weight: 600;
+}
+
+.header__gps-logo:hover {
+  filter: brightness(1.3);
+  transform: scale(1.1);
+}
+
+@media ($minDesktop) {
+  .container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
