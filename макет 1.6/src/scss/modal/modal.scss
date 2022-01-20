@@ -131,6 +131,10 @@ input {
   text-decoration: none;
 }
 
+.policy-link:hover {
+  text-decoration: underline;
+}
+
 @media ($minDesktop) {
   .feedback__close-button,
   .call__close-button {
