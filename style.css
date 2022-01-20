@@ -1014,6 +1014,10 @@ input:focus {
   text-decoration: none;
 }
 
+.policy-link:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 1366px) {
   .feedback__close-button,
 .call__close-button {
@@ -1108,6 +1112,10 @@ button:active {
 
 .white-mask--show {
   display: block;
+}
+
+.body--overflow {
+  overflow: hidden;
 }
 
 .show-all__text {
